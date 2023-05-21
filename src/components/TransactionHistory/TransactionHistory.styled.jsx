@@ -7,7 +7,9 @@ export const TransactionHistoryTable = styled.table`
   padding: 30px;
   border-radius: 10px;
   box-shadow: 1rem 1rem 2rem rgb(65, 64, 64), -1rem -1rem 2rem rgb(82, 81, 81);
-`;
+  text-transform: capitalize;
+`
+
 export const TableHeader = styled.th`
   height: 50px;
   text-align: center;
@@ -16,19 +18,20 @@ export const TableHeader = styled.th`
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
-`;
+`
+
 export const TableData = styled.td`
   height: 50px;
   text-align: center;
   border: 1px solid #555;
-`;
+`
+
 export const TableRow = styled.tr`
   :nth-of-type(even) {
-    background-color: #fff;
-    text-transform: uppercase;
+    background-color: #e0e0e0;
   }
   :hover {
     cursor: pointer;
-    background-color: #9998a3;
+    background-color: #dee06c;
   }
-`;
+`
