@@ -1,5 +1,6 @@
-import { Avatar, Description, Name, ProfileDiv, SpanLabel, SpanQuantity, Stats, StatsList, TaskNumber, Text } from './Profile.styled'; 
+import { Avatar, Description, Name, ProfileDiv, SpanLabel, SpanQuantity, Stats, StatsList, Text } from './Profile.styled';
 import PropTypes from 'prop-types';
+// import { TaskNumber } from './TaskNumber.styled';
 export const Profile = ({
     avatar,
     username,
@@ -8,9 +9,9 @@ export const Profile = ({
     stats,
     }) => {
   return (
-      
+
   <ProfileDiv class="profile">
-      <TaskNumber> Task 1  </TaskNumber>
+      {/* <TaskNumber> Task 1  </TaskNumber> */}
     <Description class="description">
         <Avatar
         src={avatar}
@@ -37,7 +38,7 @@ export const Profile = ({
     </StatsList>
   </Stats>
 </ProfileDiv>)
-} 
+}
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,

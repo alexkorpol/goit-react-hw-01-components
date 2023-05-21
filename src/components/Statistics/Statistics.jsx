@@ -1,33 +1,34 @@
-import {  } from './Statistics.styled';
+// import { TaskNumber } from 'components/Profile/TaskNumber.styled';
+import { StatItem, StatLabel, StatList, StatPercentage, StatSection, Title } from './Statistics.styled';
 // import PropTypes from 'prop-types';
-// import {getRandomColor} from './getRandomColor';
+import {getRandomHexColor} from './getRandomHexColor';
+
+
 export const Statistics = ({
     title,
     stats,
 }) => {
-    return (
-        <section class="statistics">
-  <h2 class="title">Upload stats</h2>
+  return (
+    <>
+  {/* <TaskNumber> Task 2  </TaskNumber> */}
 
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section>
+ <StatSection>
+
+      {title && <Title>{title}</Title>}
+
+      <StatList>
+        {stats.map(stat => (
+          <StatItem
+            key={stat.id}
+            style={{ backgroundColor: getRandomHexColor() }}
+          >
+            <StatLabel>{stat.label}</StatLabel>
+            <StatPercentage>{stat.percentage}%</StatPercentage>
+          </StatItem>
+        ))}
+      </StatList>
+      </StatSection>
+      </>
 
     )
 }
