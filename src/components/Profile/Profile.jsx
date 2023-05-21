@@ -1,6 +1,6 @@
 import { Avatar, Description, Name, ProfileDiv, SpanLabel, SpanQuantity, Stats, StatsList, Text } from './Profile.styled';
 import PropTypes from 'prop-types';
-// import { TaskNumber } from './TaskNumber.styled';
+
 export const Profile = ({
     avatar,
     username,
@@ -10,31 +10,29 @@ export const Profile = ({
     }) => {
   return (
 
-  <ProfileDiv class="profile">
-      {/* <TaskNumber> Task 1  </TaskNumber> */}
-    <Description class="description">
+  <ProfileDiv >
+    <Description >
         <Avatar
         src={avatar}
         alt="User avatar"
-        class="avatar"
        />
-       <Name class="name">{username}</Name>
-       <Text class="tag">{tag}</Text>
-    <Text class="location">{location}</Text>
+       <Name >{username}</Name>
+       <Text >{tag}</Text>
+    <Text >{location}</Text>
     </Description>
 
-  <Stats class="stats">
+  <Stats >
     <StatsList>
-      <SpanLabel class="label">Followers</SpanLabel>
-      <SpanQuantity class="quantity">{stats.followers}</SpanQuantity>
+      <SpanLabel >Followers</SpanLabel>
+      <SpanQuantity >{stats.followers}</SpanQuantity>
     </StatsList>
     <StatsList>
-      <SpanLabel class="label">Views</SpanLabel>
-      <SpanQuantity class="quantity">{stats.views}</SpanQuantity>
+      <SpanLabel >Views</SpanLabel>
+      <SpanQuantity >{stats.views}</SpanQuantity>
     </StatsList>
     <StatsList>
-      <SpanLabel class="label">Likes</SpanLabel>
-      <SpanQuantity class="quantity">{stats.likes}</SpanQuantity>
+      <SpanLabel >Likes</SpanLabel>
+      <SpanQuantity >{stats.likes}</SpanQuantity>
     </StatsList>
   </Stats>
 </ProfileDiv>)

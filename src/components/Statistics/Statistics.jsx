@@ -1,6 +1,6 @@
 // import { TaskNumber } from 'components/Profile/TaskNumber.styled';
 import { StatItem, StatLabel, StatList, StatPercentage, StatSection, Title } from './Statistics.styled';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {getRandomHexColor} from './getRandomHexColor';
 
 
@@ -10,7 +10,6 @@ export const Statistics = ({
 }) => {
   return (
     <>
-  {/* <TaskNumber> Task 2  </TaskNumber> */}
 
  <StatSection>
 
@@ -32,3 +31,14 @@ export const Statistics = ({
 
     )
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};

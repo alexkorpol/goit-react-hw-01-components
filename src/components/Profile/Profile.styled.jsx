@@ -4,18 +4,9 @@ export const ProfileDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0px;
 `
-// export const TaskNumber = styled.h2`
-// font-size: 40px;
-//   font-weight: 700;
-//   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/heart.png");
-//   background-position: 0 1.4em;
-//   background-size: 15px 9px;
-//   color: #e8665f;
-//   background-repeat: repeat-x;
-// `
+
 export const Description = styled.div`
   background-color: #f4f0ec;
   display: flex;
