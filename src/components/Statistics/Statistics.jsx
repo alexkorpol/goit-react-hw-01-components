@@ -1,6 +1,6 @@
-import {  } from './Statistics.styled'; 
-import PropTypes from 'prop-types';
-import {getRandomColor} from './getRandomColor';
+import {  } from './Statistics.styled';
+// import PropTypes from 'prop-types';
+// import {getRandomColor} from './getRandomColor';
 export const Statistics = ({
     title,
     stats,
